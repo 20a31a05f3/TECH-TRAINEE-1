@@ -1,0 +1,128 @@
+LIST:
+# finding the index of element in list with index method
+l=[100,3,400,50,96]
+a=l.index(400)
+print(a)
+# different methods in list
+l=[]
+for i in range(10):
+    l.append(i)
+print(l)     
+
+l2=[i for i in range(0,10)]
+print(l2)
+
+l3=[i for i in range(0,51,2)]
+print(l3) # l3=[i for i in range(0,51) if i%2==0]
+
+# list contains numbers divisible by both 7 and 11 in the range 1 and 100
+l4=[i for i in range(1,101) if i%7==0 and i%11==0]
+print(l4)
+
+#reversing a list without reverse function
+l=[1,2,3,4,5,6]
+l2=[]
+for i in range(len(l)):
+    l2.append(l[-1])
+    l.pop()
+print(l2)
+
+#slicing
+l=[1,2,3,4,5,6,7,8,9,10]
+print(l)
+print(l[0:5])
+print(l[0:10:2])
+print(l[:])
+print(l[1:])
+print(l[:5])
+print(l[::-1])
+"""
+#negative indexing only in python
+
+l=[0,1]
+while len(l)<25:
+    l.append(l[-1]+l[-2])
+print(l)
+print(len(l))    
+
+
+ARRAYS
+
+2d array PGM
+row=3
+col=3
+arr=[]
+for i in range(row):
+    element=[]
+    for j in range(col):
+        element.append(int(input("enter ele: ")))
+    arr.append(element)
+print(arr)
+o/p
+enter ele: 1
+enter ele: 2
+enter ele: 3
+enter ele: 4
+enter ele: 5
+enter ele: 6
+enter ele: 7
+enter ele: 8
+enter ele: 9
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+
+""" Arrays 1D,2D,3D  pixels,picture,resolution of images where multi dimensional matrices are used
+a1=[1,2,3]
+a2=[[1,2],[3,4]]
+"""
+"""
+row=2
+col=2
+arr=[]
+for i in range(row):
+    ele=[]
+    for j in range(col):
+        ele.append(int(input()))
+    arr.append(ele) 
+print(arr)    
+        """
+"""
+#addition of 2 matrices
+a=[[1,1],[2,2]]
+b=[[3,3],[4,4]]
+c=[]
+for i in range(len(a)):
+    d=[]
+    for j in range(len(a)):
+        ele=a[i][j]+b[i][j]
+        d.append(ele)
+    c.append(d)
+   
+print(c)  
+
+
+
+
+#taking arrays as inputs
+arr1=[]
+arr2=[]
+row=2
+col=2
+for i in range(row):
+    temp=input().split()
+    ele=list(map(int,temp)) 
+    arr1.append(ele) 
+for i in range(row):
+    temp=input().split()
+    ele=list(map(int,temp)) 
+    arr2.append(ele)    
+res=[[0 for j in range(col)] for i in range(row)]   
+print(arr1)
+print(arr2)
+for i in range(row):
+    for j in range(col):
+        res[i][j]=arr1[i][j]+arr2[i][j]
+print(res)
+
+
+

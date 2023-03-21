@@ -1,0 +1,187 @@
+CONDITIONAL STATEMENTS
+
+PROGRAM ON ODD AND EVEN 
+ 
+a=int(input("Enter a number"))
+if a%2==0:
+    print("EVEN NUMBER")
+else:
+    print("ODD NUMBER")
+O/P
+Enter a number 6
+EVEN NUMBER
+
+ELIF CONDITION
+
+if condition 1:
+    //code1
+elif condition 2:
+    //code 2
+elif condition 3:
+    //code 3
+else:
+    //code 4
+
+PGM1:
+a=int(input("Enter a number"))
+if(a==1):
+    print("MONDAY")
+elif(a==2):
+    print("TUESDAY")
+elif(a==3):
+    print("WEDNESDAY")
+elif(a==4):
+    print("THURSDAY")
+elif(a==5):
+    print("FRIDAY")
+elif(a==6):
+    print("SATURDAY")
+elif(a==7):
+    print("SUNDAY")
+else:
+    print("INVALID")
+o/p: Enter a number18
+INVALID
+
+PGM2:
+a=int(input("Enter a number"))
+if a in range(0,20):
+    if(a%2==0):
+        print("EVEN NUMBER")
+    else:
+        print("ODD NUMBER")
+elif(a>20 or a<30):
+    print("NUMBER")
+elif(a>30):
+    if(a%2==1):
+        print("NORMAL NUM")
+o/p:
+Enter a number25
+NUMBER
+Enter a number35
+NUMBER
+Enter a number18
+EVEN NUMBER
+Enter a number19
+ODD NUMBER
+
+PGM3:
+n=int(input("ENTER A NUM: "))
+if n>0 and n<20 and n%2 == 0:
+    print("Werid Number")
+elif n>=20 and n<30:
+    print("Normal Number:")
+elif n>=30 and n%2 != 0:
+    print("Number")
+else:
+    print("blabla")
+
+PGM 4:
+
+n=int(input())
+arr=[]
+for i in range(n):
+    a=input().split()
+    if a[0]=="add":
+        arr.append(int(a[1]))
+    elif a[0]=="insert":
+        ele=int(a[1])
+        ind=int(a[2])
+        arr.insert(ind,ele)
+    elif a[0]=="remove":
+        ele=int(a[1])
+        if ele in arr:
+            arr.remove(ele)
+    elif a[0]=="pop":
+        if len(arr)>0:
+            arr.pop()
+    elif a[0]=="print":
+        if len(arr)!=0:
+            print(*arr)
+
+PGM5:
+
+n=int(input())
+for i in range(n):
+    password=input()
+    pass_len=len(password) >= 8 and len(password) <= 16
+    alp=password[0].isalpha()
+    upper=False
+    lower=False
+    digit=False
+    special=False
+    for i in password:
+        if i.isdigit():
+            digit=True
+        elif i.isupper():
+            upper=True
+        elif i.islower():
+            lower=True
+        else:
+            special=True
+    if pass_len and alp and upper and lower and digit and special:
+        print(True)
+    else:
+        print(False)
+
+
+#finding sum of all negative numbers and sum of positive numbers in a list and finally adding both of them 
+po_sum=0
+neg_sum=0
+l=list(map(int,input().split()))
+for i in l:
+    if i<0:
+        neg_sum=neg_sum+i
+    elif i>0:
+        po_sum=po_sum+i
+    else:
+        continue
+print(po_sum+neg_sum)
+print(sum(l)) 
+
+PGM6:
+a=int(input())
+b=int(input())
+operator=input()
+l=['+','-','*','/','%']
+if operator in l:
+    if operator=='+':
+        print(a+b)
+    elif operator=='-':
+        print(a-b)
+    elif operator=='*':
+        print(a*b) 
+    elif operator=='%':
+        try:
+            print(a%b)
+        except:
+            print("Denominator cannot be zero")
+    
+    else:
+        try:
+            print(a/b)
+        except:
+            print("Denominator cannot be zero")
+else:
+    print("please enter valid operator")
+
+LOOPS:
+
+looping
+1) for i in object
+2)range function
+range(start,end,step)
+range--> list
+ exponent operator ** ----> base**exponent 
+for i in range(0,len(l)):
+     print(i)                 ## generating indices
+
+
+
+WHILE LOOP:
+while condtion:
+     #body
+
+diff btw in while and for
+for has termination point
+while doesnt have termination

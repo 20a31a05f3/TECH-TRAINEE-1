@@ -1,0 +1,90 @@
+SET,TUPLE,DICTIONARY
+
+SET OPERATIONS:
+s1={1,2,3,4}
+s2={4,5,6,7}
+res1=s1.intersection(s2)
+print(res1)
+res2=s1.union(s2)
+print(res2)
+res3=s1.difference(s2) #removes common elements and returns remaining elements in set 1
+print(res3)
+res4=s1.difference_update(s2)
+print(res4)
+o/p:
+{4}
+{1, 2, 3, 4, 5, 6, 7}
+{1, 2, 3}
+None
+
+TUPLE: immutable
+
+index()
+a=(1,23,4,4,4,5)
+c=a.index(23)
+print(c)
+o/p: 1
+count()
+a=(1,23,4,4,4,5)
+c=a.count(4)
+print(c)
+o/p: 3
+
+DICTIONARY -- dict
+
+{ key1 : value1 , key2 : value2 } -- key value pairs
+where , key - unique
+	  value - can be same
+
+1) update -- used to add key value pairs.
+EXAMPLE
+d={}
+d.update({'key1':'value 1'})
+d.update({'key2':'value2'})
+d.update({'key1':'value2'})
+print(d)
+print(d.get('key2'))
+O/P:{'key1': 'value2', 'key2': 'value2'}
+value2
+2)another way of accessing based on the key name
+d={}
+d.update({'key1':'value 1'})
+d.update({'key2':'value2'})
+d.update({'key1':'value2'})
+print(d)
+print(d['key2'])
+o/p:{'key1': 'value2', 'key2': 'value2'}
+value2
+PGM1-
+d={
+    'key1':'madhu',
+    'key2':'jaanu'
+}
+d1={'key1':'maths','key2':'sci'}
+d2={'key1':'ads','key2':'daa'}
+d3={'key1':'os','key2':'flat'}
+d4={'key1':'se','key2':'tk'}
+l=[d,d1,d2,d3,d4]
+
+print(l)
+
+PGM2)
+l=[]
+d={}
+for i in range(2):
+    d.update({
+        'key1':("enter a key1: "),
+        'key2':("enter a key2: ")
+    })
+    l.append(d)
+
+print(l)
+
+
+
+print(i.items()) 
+#prints key value pairs
+i.keys()
+#prints keys
+i.values()
+#prints values

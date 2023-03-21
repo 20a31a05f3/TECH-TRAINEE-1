@@ -1,0 +1,180 @@
+INHERITANCE:
+extracting the data from already existing class
+--->single,multi-level(extension of single parent class),multiple(2 parent classes),hierarchial(sibilings)
+
+SINLE LEVEL INHERITANCE:
+class A:
+    name="ABCD"
+    age=36
+
+class B(A):
+    age=10
+
+
+obj=B()
+obj.name="EFGH"
+print(obj.age)
+print(obj.name)
+O/P:
+10
+EFGH
+
+MULTI LEVEL INHERITANCE:
+
+class Animal:
+    name="Jimmy"
+    color="White"
+
+class Dog(Animal):
+    food="Dog Biscuits"
+    action="Bark"
+
+class Puppy(Dog):
+    gender="Boy"
+    age="6"
+
+obj=Puppy()
+obj.name="Henry"
+print(obj.age)
+print(obj.name)
+print(obj.action)
+print(obj.color)
+
+O/P:
+6
+Henry
+Bark
+White
+
+HIERARCHIAL INHERITANCE:
+
+class Restaraunt:
+    name="sitara"
+    established_year="2000"
+    type="non-veg"
+    location="RJY"
+
+class Chef(Restaraunt):
+    name="Roy"
+    speciality="Chinese"
+
+class Manager(Restaraunt):
+    name="John"
+    emp_under_him="8"
+
+class Customer(Restaraunt):
+    bill="700"
+    ph_num="9876543210"
+
+obj=Chef()
+print(obj.name)
+print(obj.speciality)
+print(obj.location)
+print(obj.type)
+
+o/p:
+
+Roy
+Chinese
+RJY
+non-veg
+
+MULTIPLE INHERITANCE:
+
+class P1:
+    def m1(self):
+        print("FRONT END")
+
+class P2:
+    def m2(self):
+        print("BACK END")
+
+class FULL_STACK(P1,P2):
+        print("MULTIPLE INHERITANCE EXAMPLE")
+
+obj=FULL_STACK()
+print(obj.m1())
+print(obj.m2())
+
+O/P:MULTIPLE INHERITANCE EXAMPLE
+FRONT END
+None
+BACK END
+None
+
+HYBRID INHERITANCE(HYBRID+MULTI-LEVEL)
+
+class airport:
+    location="HYDERABAD"
+
+class aeroplane(airport):
+    name = "DECCAN"
+
+class helicopter(airport):
+    num_of_pilots=2
+
+class passenger(aeroplane,helicopter):
+    destination="Bangalore"
+    hours=5
+
+obj=passenger()
+print(obj.num_of_pilots)
+print(obj.destination)
+print(obj.name)
+print(obj.location)
+
+
+O/P:
+
+2
+Bangalore
+DECCAN
+HYDERABAD
+
+POLYMORPHISM
+
+class A:
+    def method_1(self,a,b):
+        print("sum of 2 numbers",a+b)
+class B(A):
+    def method_1(self,a,b):
+        print("prod of 2 numbers",a*b)
+obj=B()
+obj.method_1(10,20)           
+#METHOD IS OVERIDDEN  ---- METHOD OVERRIDING ---RUNTIME POLYMORPHISM
+
+
+
+class A:
+    def method_1(self,a,b):
+        print("sum of 2 numbers",a+b)
+class B(A):
+    def method_1(self,abc):
+        print("value is",abc)
+    def method_1(self,a,b):
+        print("prod of 2 numbers",a*b)
+obj=B()
+obj.method_1(100)        
+ #method overloading ------------COMPILETIME POLYMORPHISM
+
+
+
+
+class A:
+    def method_1(self,a,b):
+        print("sum of 2 numbers",a+b)
+class B(A):
+    def method_1(self,abc):
+        print("value is",abc)
+    def method_1(self,a,b):
+        print("prod of 2 numbers",a*b)
+obj=B()
+obj.method_1(100,200)
+
+
+
+
+
+
+
+

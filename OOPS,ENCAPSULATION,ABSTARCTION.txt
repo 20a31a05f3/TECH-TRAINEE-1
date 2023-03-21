@@ -1,0 +1,299 @@
+FUNCTIONS:
+Repeating variables:
+
+variable*repeating_count
+
+ex=a*5 
+o/p:aaaaa
+METHOD 1:
+from filename import function
+ex:from docs import add_n_nums
+-------
+-------
+print(function(arguments))
+ex: print(add_n_nums(a,b,c,d)
+
+METHOD 2:
+import filename
+---
+---
+print(filename.functionname(arguments))
+#on typing dot we get the list of function names present in filename in a dropdown box
+
+OOPS:
+
+class Student:
+   name=""
+   roll_num=" "
+   branch=""
+   marks=0
+   attendance=0.0
+   is_using_transport=False
+   def view_attendance(self):
+        pass
+   def view_marks(self):
+        pass
+   def view_name(self):
+        pass
+   def update_name(self,new_name):
+        pass
+
+
+CONSTRUCTOR:used to provide the default values to the class variables
+a method is called when we create an object
+ex:
+class student:
+   def __init__(self):
+       pass
+example:
+
+class Student:
+    student_name=""
+    def __init__(self, name):
+        print("object created")
+        print(name)
+    
+s1=Student("Madhu")
+o/p:
+object created
+Madhu
+​
+ex2:
+
+class Student:
+    student_name="no name"
+    def __init__(self, name):
+        print("object created")
+        print(name)
+        print(self.student_name)
+    
+s1=Student("Madhu")
+o/p:
+
+object created
+Madhu
+no name
+​
+#self is used to access the class variable
+#so self.student_name is used to access the variable value i.e "no name"
+ex3:
+class Student:
+    student_name="no name"
+    def __init__(self, name):
+        self.student_name = name
+    
+s1=Student("Madhu")
+s2=Student("jaanu")
+s3=Student("hc")
+print(s2.student_name)
+o/p:
+jaanu
+#to access the objects outside of the class
+
+TO UPDATE THE VALUE
+Ex:
+class Student:
+    student_name="no name"
+    def __init__(self, name):
+        self.student_name = name
+    def update_name(self, new_name):
+        self.student_name=new_name
+    
+s1=Student("Madhu")
+s2=Student("jaanu")
+s3=Student("hc")
+s2.update_name("Madhuri Deepika")
+print(s2.student_name)
+o/p: Madhuri Deepika
+
+
+class bank:
+    def __init__(self,cus_name,cus_id,cus_branch):
+        self.cus_name=cus_name
+        self.cus_id=cus_id
+        self.cus_branch=cus_branch
+c1=bank("a",1,"smp")
+c2=bank("b",2,"amp")
+print(c1.cus_name,c1.cus_id,c1.cus_branch)
+        
+
+user2.print_details()
+#encapsulation and abstraction
+""" private variable ==    __[variable_name]
+private variable are not accessible outside the class"""
+#getter,setter methods
+
+
+
+
+ABSTRACTION: hiding the code from the user
+ENCAPSULATION:wrapping an entity in a class
+private variables can be accessed in the class only which is indicated by __(before the variable)
+it can't be accessed by outside of the class
+ascii of 0 is 48
+ascii of A is 65
+ascii of a is 97
+
+
+method overlloading --- same fuc name but different signatures ,signatures are nothing but paremeters or arguments
+"""
+
+
+"""
+class a:
+    def m1(self,x,y,z):
+        print(x*y*z)
+class b(a):
+    def m1(self,x,y):
+        print(x*y)        
+obj=b()
+obj.m1(10,20,30)        
+"""
+
+
+
+"""
+class animal:
+    def speak(self):
+        print("conveying something")
+class dog(animal):
+    def speak(self):
+        print("bow bow")
+class cat(animal):
+    def speak(self):
+       print("meow")
+class cow(animal):
+    def speak(self):
+        print("mooo")
+obj1=dog()
+obj2=cat()
+obj3=cow()
+obj1.speak()      #method overriding"""
+
+
+
+
+#abstraction
+from abc import ABC,abstractmethod     #abc==abstract class  ABC==aBSTRACT BASE CLASS
+class student(ABC):
+    def write_exam(self):
+        pass
+class a(student):
+    def write_exam(self):
+        pass                   # writing body of function in diff class
+
+
+
+#abstraction,abstract class ,abstasrt methods   ABC
+#example of abstarction
+#what is the use of abstract class
+"""
+class Area(ABC):
+     @abstractmethod                              #annotations
+     def calculate_area(self):
+         print("calculating area")
+class Square(Area):
+    pass                                           # error in this case
+class Rectangle(Area):
+     pass     
+obj=Square()
+obj.calculate_area() 
+"""
+
+
+
+"""
+class Area(ABC):
+     @abstractmethod                              #annotations
+     def calculate_area(self):
+         pass
+class Square(Area):
+     def calculate_area(self):
+         print("in square method")
+class Rectangle(Area):
+     pass     
+obj=Square()
+obj.calculate_area() 
+        
+ 
+class A(ABC):       # class a is abstarct class 
+    @abstractmethod
+    def f1(self):
+        pass
+    @abstractmethod      #defining abstract method
+    def f2(self):
+        pass       # no body in absract class
+class B(A): #class B is child class of A and it should have body of functions defined in abstract class  
+    def  f1(self):
+        print("function1")
+    def f1(self):
+        print("f1-2")
+    def f2(self):
+        pass
+obj=B()
+obj.f1()    
+obj.f2()
+
+
+LOGGING SYSTEM USING OOPS CONCEPT:
+User.py FILE
+class UserClass:
+    full_name = ""
+    email=""
+    __password=""
+    mobile_number = ""
+    def __init__(self, name, email, password):
+        self.full_name = name
+        self.email = email
+        self.__password = password
+    def update_name(self, new_name):
+        self.full_name = new_name
+    def get_name(self):
+        return self.full_name
+    """ setter method for private variable password """
+    def update_password(self, new_password):
+        self.__password = new_password
+    def update_mobile_number(self, new_number):
+        self.mobile_number = new_number
+    """ getter method for private variable password """
+    def get_user_password(self):
+        return self.__password
+
+Login.py file
+
+from User import UserClass
+
+class Login:
+    __db = []
+    def __init__(self):
+        self.print_menu()
+    def print_menu(self):
+        print("Welcome User")
+        print("1. Register")
+        print("2. Login")
+        print("3. Exit")
+    def create_user(self, name, email, password):
+        new_user = UserClass(name, email, password)
+        self.__db.append(new_user)
+        print(self.__db)
+        return True
+    def validate_user(self, email, password):
+        pass
+
+obj = Login()
+while True:
+    option = input("Enter your choice: ")
+    if option == '1':
+        name = input("Enter your full name: ")
+        email = input("Enter Email: ")
+        password = input("create new password: ")
+        res = obj.create_user(name,email, password)
+        if res == True:
+            print("User created successfully")
+    elif option == '2':
+        pass
+    elif option == '3':
+        break
+    else:
+        print("Invalid Input")
+

@@ -1,0 +1,33 @@
+click new
+give repository name\
+give access to public
+n click create repository 
+copy the https link or copy the https link from code button 
+paste cmd in location link
+then
+git init
+#to initialize the git to link with your local system
+git remote add origin {link to remote repo-paste the link here}
+ 
+git add .
+#  . indicates to add files
+git commit -m "initial commit #any kind of message"
+#shows the uploaded files #stging area
+git push origin master
+#master is the main  thing and there exists a branches,master is a default branch
+
+
+for any chnges in file
+open cmd and type
+git add .
+git commit -m "any msg"
+git push origin master
+#eventhough we add all the files once again but it only considers the changes and updates it
+
+create a branch
+now enter
+git add .
+git commit -m "any msg"
+by default origin master is there but inorder to update the new branch to ur local system
+ 
+git push origin "git branch name of branch"

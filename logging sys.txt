@@ -1,0 +1,32 @@
+LOGGING SYSTEM
+db=[{'abc@example.com':'abc'},
+    {'efg@example.com':'efg'},
+    {'hij@example.com':'hij'},
+    {'klm@example.com':'klm'}
+]
+print(db)
+a=input("enter username: ")
+b=input("enter password: ")
+d={a:b}
+if d in db:
+    print("login successful ")
+else:
+    print("login unsusccessful")
+O/P:enter username: abc@example.com
+enter password: abc
+login successful 
+
+TRY AND EXCEPT :
+a=int(input("enter a num:"))
+b=int(input("enter a number b"))
+try:
+    print(a/b)
+except:
+    print("b cannot be zero")
+print("after the error")
+O/P:
+
+enter a num:4
+enter a number b0
+b cannot be zero
+after the error

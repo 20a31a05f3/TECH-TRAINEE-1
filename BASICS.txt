@@ -1,0 +1,241 @@
+BASICS:
+
+datatypes
+boolean=True,False
+int,complex,string '',"",""" """
+doc="""
+
+document string
+"""
+list1=[] #ordered,indexed
+#object
+l=[1,2.0]
+#1 is one object in list l
+list is a collections of elements
+tup=()
+#changing tuple #type error
+xyz=(1)#int
+xyz=(1,)#tuple
+# why? bodmas rule a=(10-9)*2
+set1={}# no duplicate elements ,mutuable?
+set2={1,'a'}
+#print(set2)#no duplicates ,unordered
+#list in sets are not acceptable for different functions
+arithmetic operators +,-,*,/(float division),//(int division),%
+naming conventions,camel casings,mul_of_numbers or MulOfNumbers
+#relational operators
+#comparision operators
+#relational and comparisional operators are same < > <= >= == !=
+#logical operators  and,or,not
+#print(23 and 7) #7
+#74 and 31
+#print(74 and 31) #31
+#print(1 & 2) #0
+#print(1 and 2) #2
+#print(1 && 2) # syntax error,invalid syntax
+#print(bin(74)) #str type
+a="1001010"
+b="0b1001010"
+#print(b)
+#none datatype
+#sample program
+a=1
+b=2.0
+c='a'
+d="madhu"
+e=""" doc
+string
+"""
+f=[1,'a',[1,2,3]]
+#before modification
+print(f)
+f[0]=2
+#after modification
+print(f)
+g=(1,23)
+print(type(4))
+print(type(4,))
+h={1,2,3,1,2,3}
+print(h)
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+print(type(f))
+print(type(g))
+print(type(h))
+add_of_nums=1+2
+sub_of_nums=1-2
+print(add_of_nums)
+print(sub_of_nums)
+print( 23 and 32)
+#institute code 002
+#git cli
+#unary,binary,ternary ,operators  (operands count)
+# ternary example:      (?:)    condition ? True part: False part  ----- 3 operands   (( in python  if (cond) true else false part))
+# assignment operators =,+=,-=,*=,/=
+#bitwise operators    &,|,^
+#membership operator in ,not in   o/p: True or Fasle
+#identity operator  is,is not
+#list methods ---- append,len,pop,remove,insert,extend,count
+#pop() -- last element will be removed
+#pop(index)
+#remove(value)
+# pop method returns the value and remove method doesnt return anything
+#insert(index,object)
+#see about arguments and parameters
+a=[1,2]
+b=[100,200]
+a.extend(b)  #does it take tuple or something?  #[1,2,100,200]
+a.count(1) #1
+# list-clear    deletes the elements in list
+#copy   n=a.copy()   0r n=a   (see diff)
+#reverse,sort
+#a.sort(reverse=True)
+#sorted
+a=[3,1,2]
+b=sorted(a)
+#a=[3,1,2]
+#b=[1,2,3]
+#in other cases it gives none type
+# see the diff btw sort() and sorted()
+b=sorted(a,reverse=True)
+#see about reversed function
+#type casting  int to str,str to int
+#a=list('12345')
+#a=['1','2'.....]
+#b=map(int,a)
+#print(b) # < map obj at 1233....>
+#b=list(map(int,a))
+#b=[1,2,....]
+#user inputs
+#a=input("enter:")
+
+DATATYPES
+a="string"
+print(type(a))
+b=1
+print(type(b))
+c=10j
+print(type(c))
+l=[1,2]
+print(type(l))
+t=(1,2)
+print(type(t))
+s={1,2,3,1,2,3}
+print(s,type(s))
+
+operators
+a=10
+b=5
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a%b)
+print(a**b)
+print(a and b)
+print(a or b)
+print(a & b)
+print(a | b)
+lst=[1,2,3,4,5,6]
+print(1 in lst)
+print(1 not in lst)
+z=1
+y=2
+print(z is y)
+print(z is not y)
+
+list medhods
+lst.append(7)
+print(lst)
+lst.pop()
+print(lst)
+lst.pop(3)
+print(lst)
+lst.remove(1)
+print(lst)
+lst.extend([100,200,300])
+print(lst)
+lst.insert(0,500)
+print(lst)
+a=lst.count(2)
+print(a)
+b=lst.copy()
+print(b)
+b.clear()
+print(b)
+print(lst)
+lst.sort()
+print(lst)
+
+#string methods
+s="hello world"
+s.capitalize()S
+
+s.split(' ')
+
+s
+
+s.split()
+
+s.split('')
+
+p='hello@world'
+p.split('@')
+
+
+l=['a','b']
+''.join(l)
+
+' '.join(l)
+
+'and'.join(l)
+
+#when we split string the output produced is list 
+#join is used to form string from list
+s.title()
+
+s1="abcd"
+s2="ABCD"
+print(s1.upper())
+print(s2.lower())
+
+'hello world'.count('l')
+
+s1.isdigit()
+
+s1.isalpha()
+
+s1.isalnum()
+
+s1.swapcase()
+
+d='abCD'
+d.swapcase()
+
+f='12ab'
+f.isalnum()
+
+g='ab'
+g.isalnum()
+
+h="@abc"
+h.isalnum()
+
+#string formating
+first="I am "
+age=20
+last=" years old"
+print(first+str(age)+last)
+print("I am {} years old".format(age)) #string formatting
+
+print("I am {} years and {} months old".format(20,3))
+
+print("I am {} years and {:.100f} months old".format(20,3))
+
+print("I am {:10} years and {:10.2f} months old".format(20,3)) #spaces
+#fstrings
+num=10
+print(f"the square of {num} is {num*num:.5f}")

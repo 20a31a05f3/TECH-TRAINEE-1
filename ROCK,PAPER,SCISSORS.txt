@@ -1,0 +1,83 @@
+rock paper scissors game
+import random
+print("Lets play")
+print("CHOOSE:\n0 FOR ROCK\n1 FOR SCISSOR\n2 FOR PAPER")
+user_choice=int(input())
+L=["ROCK","PAPER","SCISSOR"]
+print("USER CHOICE: ",L[user_choice])
+computer_choice=random.randint(0,3)
+print("COMPUTER CHOICE: ",L[computer_choice])
+print(computer_choice)
+if user_choice==computer_choice:
+    print("BOTH WON")
+elif (user_choice==0 and computer_choice==1) or(user_choice==1 and computer_choice==2) or (user_choice==2 and computer_choice==0):
+    print("USER WON")
+else:
+    print("COMPUTER WON")
+
+
+#rock paper scissors game with who won first by scoring n points first
+import random
+print("Lets play")
+a=3
+user_win=0
+comp_win=0
+for i in range(a):
+    print("CHOOSE:\n0 FOR ROCK\n1 FOR SCISSOR\n2 FOR PAPER")
+    user_choice=int(input())
+    L=["ROCK","PAPER","SCISSOR"]
+    print("USER CHOICE: ",L[user_choice])
+    computer_choice=random.randint(0,2)
+    print("COMPUTER CHOICE: ",L[computer_choice])
+    if user_choice==computer_choice:
+        user_win += 0
+        comp_win += 0
+    elif (user_choice==0 and computer_choice==1) or(user_choice==1 and computer_choice==2) or (user_choice==2 and computer_choice==0):
+
+        user_win += 1
+    else:
+        comp_win += 1
+    print("Present score of user:",user_win)
+    print("Present score of computer:",comp_win)    
+    if user_win==a or comp_win==a:
+        if user_win==a:
+            print("USER WINS")
+        else:
+            print("COMPUTER WINS")
+
+#work: validating username and password in login systems
+#rock paper scissors game
+from random import randint
+choice = ['rock', 'paper', 'scissor']
+p_score = 0
+c_score = 0
+limit = 3
+while p_score != limit and c_score != limit:
+    print(f"choose among the following: ", choice)
+    my_ch = input("Player choice: ").lower()
+    if my_ch not in choice:
+        print("Invalid input")
+        continue
+    sys_ch = choice[int(randint(0,2))]
+    print(f"System choice: {sys_ch}")
+    if my_ch == sys_ch:
+        print("---DRAW---")
+        continue
+    if my_ch == "rock" and sys_ch == "scissor":
+        p_score += 1
+    elif my_ch == "paper" and sys_ch == "rock":
+        p_score += 1
+    elif my_ch == "scissor" and sys_ch == "pape
+
+
+#language translation
+from translate import Translator
+a=Translator(to_lang="Telugu")
+b=a.translate("night")
+print(b)
+c=Translator(from_lang="telugu",to_lang="english")
+d=c.translate("NENU")
+print(d)
+e=Translator(from_lang="english",to_lang="hindi")
+f=e.translate("meher")
+print(f)

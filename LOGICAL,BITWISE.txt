@@ -1,0 +1,73 @@
+LOGICAL OPERATORS
+
+and,or,not
+AND 
+(true and false)--prints false #false-->0,negative values
+(true and true)--prints true value i,e 2nd term
+(false and false--prints false i.e 2nd ndterm
+NOTE -->if there exists 0,negative values then it prints the value zer0            
+example:
+ 9 and 4    #t and t-->2nd value
+4
+>>> 0 and -1   #f and f give false but 0 is present--> 0
+0
+>>> -1 and 0
+0
+>>> -1 and -4 #f and f prints 2nd term
+-4
+>>> 1 and 7 
+7
+OR
+>>> 2 or 3 #reprsents true  value if one of them  is true
+2
+>>> 0 or 1
+1
+>>> 10 or 12
+10
+>>> 1 or o
+1
+>>> -1 or -2#reprsents 1 st value
+-1
+
+BITWISE : Converts the number into binary code and does the "&"(and) , "|" (or), "^" (not)
+for bitwise xor:(both i/p's  same false,both i/p's different true)
+t ^ t =f->0
+f ^ f=f->0
+f ^ t=t->1
+t ^ f=t->1
+
+INDEX
+specifies the index value1 & 1
+1
+>>> 1 & 3
+1
+>>> 2 & 6
+2
+>>> 0 & 1
+0
+
+example:a=[1,3,4,6]
+t=a.index(4)
+print(t)
+o/p: 2
+
+PGM1:
+a=int(input())
+b=int(input())
+x=bin(a)[2:]
+print(x)
+y=bin(b)[2:]
+print(y)
+def ones_complement(s):
+    res=""
+    for i in s:
+        if i=='0':
+            res += '1'
+        else:
+            res += '0'
+    return res
+x=ones_complement(x)
+print(x)
+y=ones_complement(y)
+print(y)
+print(int(x,2)^int(y,2))
